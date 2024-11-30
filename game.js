@@ -32,3 +32,13 @@ function update() {
         alert('You completed the level!');
     }
 }
+function executeCode(commands) {
+    commands = commands.split('\n');
+    commands.forEach((command, index) => {
+        setTimeout(() => {
+            if (command.trim() === 'moveForward()') robot.y -= 50;
+            else if (command.trim() === 'moveLeft()') robot.x -= 50;
+            else if (command.trim() === 'moveRight()') robot.x += 50;
+        }, index * 500);
+    });
+}
