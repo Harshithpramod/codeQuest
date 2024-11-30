@@ -9,3 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         executeCode(code);
     });
 });
+moveForward();
+moveRight();
+moveForward();
